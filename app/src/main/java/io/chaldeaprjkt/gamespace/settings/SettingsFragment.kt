@@ -23,10 +23,12 @@ import android.provider.Settings
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.preference.ListPreference
+
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
+
 import io.chaldeaprjkt.gamespace.R
 import io.chaldeaprjkt.gamespace.data.GameOptimizationManager
 import io.chaldeaprjkt.gamespace.preferences.AppListPreferences
@@ -36,7 +38,7 @@ import io.chaldeaprjkt.gamespace.preferences.QuickStartAppPreferenceDialogFragme
 
 import javax.inject.Inject
 
-@AndroidEntryPoint(PreferenceFragmentCompat::class)
+@AndroidEntryPoint(SettingsBasePreferenceFragment::class)
 class SettingsFragment : Hilt_SettingsFragment(), Preference.OnPreferenceChangeListener {
 
     @Inject
